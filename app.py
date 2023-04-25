@@ -11,7 +11,7 @@ st.write('''
 ''', unsafe_allow_html=True)
 
 @st.cache_resource
-def plot_graph(fig, type):
+def plot_graph(fig, type=None):
   if type == 'hist':
     fig.update_xaxes(categoryorder='total descending')
   return st.plotly_chart(fig, use_container_width=True)
@@ -41,18 +41,25 @@ class Page():
 
     self.plot_section('Emissão de Gases de Efeito Estufa (1970-2019)', px.line(self.emission_by_year))
     self.plot_section('Tipos de Emissão (2000-2019)', px.bar(self.df['tipo_emissao'].value_counts()))
-    self.plot_section('Emissões por Estado (2000-2019)', px.choropleth_mapbox(
-      self.df,
-      locations = 'sigla_uf',
-      color = 'emissao',
-      geojson = self.geojson,
-      mapbox_style = "carto-positron",
-      range_color=(0, 250_000),
-      center={'lat': -15.793889, 'lon': -47.882778},
-      zoom=2.5,
-      height=500))
-    self.plot_section('Estados com Mais Registros (2000-2019)', px.bar(self.df['sigla_uf'].value_counts()),
-      tip='NA: Não Alocado.')
+
+    st.write('---')
+    st.write('## Emissões por Estado (2000-2019)')
+    state_map, state_bar = st.tabs(['Mapa', 'Barras'])
+    with state_map:
+      plot_graph(px.choropleth_mapbox(
+        self.df,
+        locations = 'sigla_uf',
+        color = 'emissao',
+        geojson = self.geojson,
+        mapbox_style = "carto-positron",
+        range_color=(0, 250_000),
+        center={'lat': -15.793889, 'lon': -47.882778},
+        zoom=2.5,
+        height=500))
+    with state_bar:
+      st.info('NA: Não Alocado.', icon='ℹ️')
+      plot_graph(px.bar(self.df['sigla_uf'].value_counts()))
+
     self.plot_section('Atividades Econômicas (2000-2019)', px.bar(self.df['atividade_economica'].value_counts()))
     self.plot_section('Top 10 Gases com Maiores Emissões (2000-2019)', px.bar(self.df['gas'].value_counts().head(10)))
 
