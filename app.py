@@ -22,8 +22,27 @@ class Page():
     self.df = pd.read_parquet('./data/dataset_clean.parquet')
     self.emission_per_uf = self.get_grouped_data(self.df, 'sigla_uf')
     self.emission_per_emission_type = self.get_grouped_data(self.df, 'tipo_emissao')
-    self.emission_per_eco_activity = self.get_grouped_data(self.df, 'atividade_economica')
     self.emission_per_gas = self.get_grouped_data(self.df, 'gas').head(10)
+    self.emission_per_eco_activity = self.get_grouped_data(self.df, 'atividade_economica')
+    activity_dict = {
+    "AGROPEC": "Agricultura",
+    "PEC": "Pecuária",
+    "AGR": "Agropecuária",
+    "MET": "Metalurgia",
+    "CIM": "Construção",
+    "TRAN_CARGA": "Transporte de Carga",
+    "TRAN_PASS": "Transporte de Passageiros",
+    "ENE_ELET": "Energia Elétrica",
+    "COM": "Comercial",
+    "PUB": "Público",
+    "RES": "Residencial",
+    "PROD_COMB": "Produção de Combustível",
+    "SANEAMENTO": "Saneamento",
+    'Outra_IND': 'Outra Indústria',
+    'HFC': 'Hidrofluorcarbonetos',
+    }
+    for key, value in activity_dict.items():
+      self.emission_per_eco_activity = self.emission_per_eco_activity.rename(index={key: value})
 
     with open('data/Brasil.json', 'r') as file:
       self.geojson = json.loads(file.read())
