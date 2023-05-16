@@ -7,6 +7,7 @@ Categorias da coluna nivel_1:
 "Processos Industriais"
 
 
+
 Categorias da coluna nivel_2:
 
 "Emissões pela Queima de Combustíveis"
@@ -29,6 +30,30 @@ Categorias da coluna nivel_2:
 "Emissões de HFCs"
 "Uso Não-Energético de Combustíveis e Uso de Solventes"
 "Uso de SF6"
+
+nivel_2 = {
+    "Emissões de Gases de Efeito Estufa": (
+        "Emissões pela Queima de Combustíveis",
+        "Fermentação Entérica",
+        "Manejo de Dejetos Animais",
+        "Queima de Resíduos Agrícolas",
+        "Emissões Fugitivas",
+        "Emissões de HFCs",
+        "Uso de SF6"
+    ),
+    "Alterações no Uso do Solo e Florestas": (
+        "Solos Manejados",
+        "Alterações de Uso do Solo",
+        "Remoção por Mudança de Uso da Terra",
+        "Remoção por Vegetação Secundária",
+        "Resíduos Florestais",
+        "Remoção em Áreas Protegidas"
+    ),
+    "Produção e Indústria": ( "Produção de Metais", "Produtos Minerais", "Indústria Química"),
+    "Resíduos e Efluentes": ("Resíduos Sólidos", "Efluentes Líquidos"),
+    "Outros": ("Uso Não-Energético de Combustíveis e Uso de Solventes", "Cultivo do Arroz")
+}
+
 
 
 Categorias da coluna nivel_3:
@@ -95,6 +120,68 @@ Categorias da coluna nivel_3:
 "Produção de Formaldeído"
 "Produção de Propeno"
 
+nivel_3 = {
+    "Setores Econômicos": (
+        "Industrial",
+        "Comercial",
+        "Agropecuário",
+        "Indiretas",
+        "Público",
+        "Residencial",
+        "Transportes",
+    ),
+    "Biomas": (
+        "Cerrado",
+        "Amazônia",
+        "Caatinga",
+        "Mata Atlântica",
+        "Pampa",
+        "Pantanal",
+    ),
+    "Tratamento de Resíduos Sólidos": ("Disposição Final de Resíduos Sólidos", "Tratamento Biológico de Resíduos Sólidos"),
+    "Efluentes Líquidos": ("Efluentes Líquidos Industriais", "Efluentes Líquidos Domésticos"),
+    "Produção de Energia": ("Geração de Eletricidade (Serviço Público)", "Produção de Combustíveis"),
+    "Produção Industrial": (
+        "Produção de Ferro Gusa e Aço",
+        "Produção de Cimento",
+        "Produção de Ácido Nítrico",
+        "Produção de Ácido Adípico",
+        "Produção de Ferroligas",
+        "Produção de Vidro",
+        "Produção de Cal",
+        "Produção de Óxido de Eteno",
+        "Produção de Poliestireno",
+        "Produção de Carbureto de Cálcio",
+        "Produção de Amônia",
+        "Produção de Alumínio",
+        "Produção de Magnésio",
+        "Produção de Caprolactama",
+        "Produção de Acrilonitrila",
+        "Produção de Outros Não-Ferrosos",
+        "Produção de Ácido Fosfórico",
+        "Produção de Metanol",
+        "Produção de Polietileno PEBD",
+        "Produção de Estireno",
+        "Produção de Eteno",
+        "Produção de Coque de Petróleo Calcinado",
+        "Equipamentos Elétricos",
+        "Produção de Cloreto de Vinila",
+        "Produção de Polietileno PEAD",
+        "Produção de PVC",
+        "Produção de Negro-de-fumo",
+        "Produção de Borracha de butadieno estireno (SBR)",
+        "Produção de Anidrido Ftálico",
+        "Produção de ABS",
+        "Produção de Polipropileno",
+        "Produção de Polietileno PELBD",
+        "Produção de Dicloroetano",
+        "Produção de Etilbenzeno",
+        "Produção de Formaldeído",
+        "Produção de Propeno",
+    ),
+    "Consumo Final Não Energético": ("Consumo Final Não Energético", "Consumo de Barrilha"),
+}
+
 
 Categorias da coluna nivel_4:
 
@@ -128,7 +215,6 @@ Categorias da coluna nivel_4:
 "Ferro Ligas"
 "Outros"
 "Fertilizantes Sintéticos"
-"NÃO SE APLICA "
 "Produção de Carne Avícola"
 "Produção de Carne Bovina"
 "Produção de Carne Suína"
@@ -155,72 +241,234 @@ Categorias da coluna nivel_4:
 "Consumo em Outros Setores"
 "Consumo de Calcário"
 
+nivel_4 = {
+    "Indústria": (
+        "Mineração e pelotização",
+        "Ferro gusa e aço",
+        "Outras indústrias",
+        "Papel e celulose",
+        "Cerâmica",
+        "Alimentos e bebidas",
+        "Cimento",
+        "Química",
+        "Têxtil",
+        "Refino de petróleo",
+        "Produção de carvão vegetal",
+    ),
+    "Transporte": (
+        "Rodoviário",
+        "Exploração de petróleo e gás natural",
+        "Aéreo",
+        "Hidroviário",
+        "Ferroviário",
+    ),
+    "Tratamento de Resíduos": (
+        "Queima de Resíduos a Céu Aberto",
+        "Tratamento de Resíduos por Incineração",
+        "Tratamento de Resíduos por Incineração ",
+    ),
+    "Agricultura e Pecuária": (
+        "Resíduos Agrícolas",
+        "Deposição de dejetos em pastagem",
+        "Produção de Leite Cru ",
+        "Produção de Leite Pasteurizado ",
+        "Fertilizantes Sintéticos",
+        "Produção de Carne Avícola",
+        "Produção de Carne Bovina",
+        "Produção de Carne Suína",
+        "Produção de Celulose",
+        "Produção de Cerveja",
+    ),
+    "Energia": (
+        "Deposição Atmosférica",
+        "Lixiviação",
+        "Solos orgânicos",
+        "Produção de álcool",
+        "Produção de carvão mineral e outros",
+        "Transporte de gás natural",
+        "Consumo de Combustíveis Redutores",
+        "Consumo de Dolomita",
+        "Cal Magnesiana",
+        "Cal Dolomítica",
+        "Cal Calcítica",
+        "Tecnologia Prebaked Anode",
+        "Tecnologia Soderberg",
+        "Uso de SF6",
+        "Consumo em Outros Setores",
+        "Consumo de Calcário",
+    ),
+    "Não se Aplica": (
+        "NÃO SE APLICA",
+    ),
+    "Resíduos Sólidos": (
+        "Resíduos Sólidos Urbanos",
+        "Resíduos de Serviços de Saúde ",
+        "Lodo de ETE",
+        "Aplicação de resíduos orgânicos",
+    ),
+    "Dentrou ou Fora de Área Protegida": ("em Área Protegida", "fora de Área Protegida"),
+    "Não Ferrosos e Outros": ("Não ferrosos e outros da metalurgia", "Consumo Final Não Energético"),
+}
+
+
 
 Categorias da coluna nivel_5:
 
-"Óleo combustível"
-"Diesel de petróleo"
-"Óleo diesel"
-"Gás natural seco"
-"GLP"
-"Animal"
-"Outros"
-"Coque de petróleo"
-"Desmatamento"
-"Gás natural úmido"
-"Resíduos Sólidos Urbanos"
-"Resíduos de Serviços de Saúde "
-"Regeneração"
-"Vegetal"
-"Disposição em Aterro Sanitário"
-"Disposição em Aterro Controlado ou Lixão"
-"Gasolina automotiva"
-"Álcool hidratado"
-"Gasolina C"
-"NÃO SE APLICA "
-"Outras Mudanças de uso da terra"
-"Vegetação nativa estável"
-"Compostagem"
-"Gás canalizado SP"
-"Gás de refinaria"
-"Biogás"
-"Bagaço de cana"
-"Querosene de aviação"
-"Gasolina de aviação"
-"Lenha carvoejamento"
-"Gás canalizado RJ"
-"Outras biomassas"
-"Outras não renováveis"
-"Nafta"
-"Lenha"
-"Outros energéticos de petróleo"
-"Carvão vegetal"
-"Carvão vapor sem especificação"
-"Carvão vapor 6000"
-"Carvão vapor 5900"
-"Carvão vapor 5200"
-"Carvão vapor 4700"
-"Carvão vapor 4500"
-"Querosene iluminante"
-"Carvão vapor 4200"
-"Carvão vapor 3300"
-"Carvão vapor 3100"
-"Coque de carvão mineral"
-"Carvão vapor 3700"
-"Lixívia"
-"Gás de coqueria"
-"Alcatrão"
-"Consumo de Combustíveis Renováveis"
-"NÃO SE APLICA"
-"Gás natural"
-"Petróleo e gás natural"
-"Petróleo"
-"Consumo de Combustíveis Fósseis"
-"Carvão mineral"
-"Lubrificantes"
-"Outros não energéticos de petróleo"
-"Álcool anidro"
-"Solventes"
+1- "Lenha carvoejamento"
+1- "Carvão vegetal"
+1- "Carvão vapor sem especificação"
+1- "Carvão vapor 6000"
+1- "Carvão vapor 5900"
+1- "Carvão vapor 5200"
+1- "Carvão vapor 4700"
+1- "Carvão vapor 4500"
+1- "Carvão vapor 4200"
+1- "Carvão vapor 3300"
+1- "Carvão vapor 3100"
+1- "Carvão vapor 3700"
+1- "Carvão mineral"
+1- "Coque de carvão mineral"
+1- "Gás de coqueria"
+
+2- "Consumo de Combustíveis Renováveis"
+2- "Consumo de Combustíveis Fósseis"
+2- "Querosene de aviação"
+2- "Gasolina de aviação"
+
+3- "Gás natural"
+3- "Petróleo"
+3- "Petróleo e gás natural"
+
+4- "Biogás"
+4- "Bagaço de cana"
+4- "Outras biomassas"
+4- "Animal"
+4- "Lenha"
+
+5- "Óleo combustível"
+5- "Diesel de petróleo"
+5- "Óleo diesel"
+
+6- "Gás canalizado SP"
+6- "Gás canalizado RJ"
+
+7- "Desmatamento"
+7- "Resíduos Sólidos Urbanos"
+7- "Resíduos de Serviços de Saúde "
+7- "Regeneração"
+7- "Vegetal"
+7- "Vegetação nativa estável"
+7- "Compostagem"
+7- "Outras Mudanças de uso da terra"
+7- "Outros"
+7- "Outras não renováveis"
+7- "Lubrificantes"
+7- "Solventes"
+7- "Querosene iluminante"
+7- "Lixívia"
+7- "Alcatrão"
+
+8- "Outros energéticos de petróleo"
+8- "Outros não energéticos de petróleo"
+8- "Coque de petróleo"
+8- "Nafta"
+
+9- "Disposição em Aterro Sanitário"
+9- "Disposição em Aterro Controlado ou Lixão"
+
+10- "Gasolina automotiva"
+10- "Gasolina C"
+
+11- "Gás natural seco"
+11- "GLP"
+11- "Gás natural úmido"
+11- "Gás de refinaria"
+
+12- "Álcool hidratado"
+12- "Álcool anidro"
+
+13- "NÃO SE APLICA"
+
+FEITO POR EDUARDO (13 Categorias):
+nivel_5 = {
+  1: 'Derivado do Carvão',
+  2: 'Consumo de Combustíveis',
+  3: 'Petróleo e gás natural',
+  5: 'Óleo diesel',
+  4: 'Biomassas',
+  6: 'Gás canalizado',
+  7: 'Outros',
+  8: 'Outros derivados do Petróleo',
+  9: 'Disposição em Aterro',
+  10: 'Gasolina',
+  11: 'Outros Gases',
+  12: 'Outros Álcoois',
+  13: 'NÃO SE APLICA',
+}
+
+FEITO PELO CHATGPT (8 Categorias):
+nivel_5 = {
+    "Energia e Combustíveis": (
+        "Óleo combustível",
+        "Diesel de petróleo",
+        "Óleo diesel",
+        "Gás natural seco",
+        "GLP",
+        "Carvão mineral",
+        "Querosene de aviação",
+        "Gasolina de aviação",
+        "Nafta",
+        "Outros energéticos de petróleo",
+        "Coque de petróleo",
+        "Lenha carvoejamento",
+        "Gás de coqueria"
+    ),
+    "Biomassas": (
+        "Bagaço de cana",
+        "Outras biomassas",
+        "Lenha"
+    ),
+    "Resíduos": (
+        "Resíduos Sólidos Urbanos",
+        "Resíduos de Serviços de Saúde",
+        "Disposição em Aterro Sanitário",
+        "Disposição em Aterro Controlado ou Lixão"
+    ),
+    "Regeneração e Vegetação": (
+        "Desmatamento",
+        "Regeneração",
+        "Vegetal",
+        "Vegetação nativa estável",
+        "Outras Mudanças de uso da terra"
+    ),
+    "Gás Canalizado": (
+        "Gás canalizado SP",
+        "Gás canalizado RJ"
+    ),
+    "Outros Combustíveis": (
+        "Querosene iluminante",
+        "Gás de refinaria",
+        "Outros não energéticos de petróleo",
+        "Lubrificantes",
+        "Solventes"
+    ),
+    "Combustíveis Renováveis": (
+        "Consumo de Combustíveis Renováveis",
+        "Biogás",
+        "Álcool hidratado",
+        "Gasolina C",
+        "Outros Álcoois"
+    ),
+    "Petróleo e Gás Natural": (
+        "Gás natural",
+        "Petróleo e gás natural",
+        "Petróleo",
+        "Consumo de Combustíveis Fósseis"
+    ),
+    "Outros": ("Lixívia", "Alcatrão"),
+    "Não se Aplica": ("NÃO SE APLICA")
+}
+
 
 
 Categorias da coluna nivel_6:
@@ -288,4 +536,70 @@ Categorias da coluna nivel_6:
 "Uso agropecuário -- Área sem vegetação"
 "Floresta secundária -- Floresta secundária"
 
+FEITO PELO CHATGPT:
 
+nivel_6 = {
+    "Energia e Combustíveis": (
+        "Centrais Elétricas Autoprodutoras",
+        "Consumo Final Energético",
+        "Carvoarias"
+    ),
+    "Agricultura": (
+        "Bubalino",
+        "Fertilizantes Sintéticos",
+        "Soja",
+        "Caprino",
+        "Equino",
+        "Muar",
+        "Asinino",
+        "Aves",
+        "Ovino",
+        "Arroz",
+        "Algodão",
+        "Milho",
+        "Outras Culturas",
+        "Cana de Açucar",
+        "Feijão",
+        "Mandioca",
+        "Gado de Leite",
+        "Gado de Corte"
+    ),
+    "Transporte": (
+        "Ônibus",
+        "Comerciais Leves",
+        "Motocicletas",
+        "Aeronaves",
+        "Automóveis",
+        "Caminhões",
+        "Embarcações",
+        "Locomotivas"
+    ),
+    "Florestas": (
+        "Floresta primária -- Uso agropecuário",
+        "Silvicultura -- Área sem vegetação",
+        "Silvicultura -- Vegetação não florestal secundária",
+        "Vegetação não florestal primária -- Silvicultura",
+        "Vegetação não florestal primária -- Vegetação não florestal primária",
+        "Área sem vegetação -- Silvicultura",
+        "Vegetação não florestal secundária -- Silvicultura",
+        "Silvicultura -- Floresta secundária",
+        "Vegetação não florestal primária -- Área sem vegetação",
+        "Floresta primária -- Floresta primária",
+        "Floresta primária -- Área sem vegetação",
+        "Silvicultura -- Uso agropecuário",
+        "Vegetação não florestal primária -- Área sem vegetação",
+        "Uso agropecuário -- Uso agropecuário",
+        "Área sem vegetação -- Floresta secundária",
+        "Vegetação não florestal secundária -- Área sem vegetação",
+        "Área sem vegetação -- Uso agropecuário",
+        "Floresta secundária -- Silvicultura",
+        "Vegetação não florestal secundária -- Vegetação não florestal secundária",
+        "Floresta secundária -- Uso agropecuário",
+        "Floresta secundária -- Área sem vegetação",
+        "Floresta primária -- Silvicultura",
+        "Uso agropecuário -- Área sem vegetação",
+        "Floresta secundária -- Floresta secundária"
+    ),
+    "Outros": ("Solos orgânicos"),
+    "Não se Aplica": ("NÃO SE APLICA")
+}
