@@ -24,6 +24,13 @@ class Page():
     self.emission_per_emission_type = self.get_grouped_data(self.df, 'tipo_emissao')
     self.emission_per_gas = self.get_grouped_data(self.df, 'gas').head(10)
     self.emission_per_eco_activity = self.get_grouped_data(self.df, 'atividade_economica')
+    self.df_nivel_1 = self.get_grouped_data(self.df, 'nivel_1')
+    self.df_nivel_2 = self.get_grouped_data(self.df, 'nivel_2')
+    self.df_nivel_3 = self.get_grouped_data(self.df, 'nivel_3')
+    self.df_nivel_4 = self.get_grouped_data(self.df, 'nivel_4')
+    self.df_nivel_5 = self.get_grouped_data(self.df, 'nivel_5')
+    self.df_nivel_6 = self.get_grouped_data(self.df, 'nivel_6')
+
     activity_dict = {
     "AGROPEC": "Agricultura",
     "PEC": "Pecuária",
@@ -106,5 +113,20 @@ class Page():
                       text='Apontamento do índice de emissão de GEE nas atividades mais presentes no Brasil.')
     self.plot_section('Top 10 Gases com Maiores Emissões (2000-2019)', px.bar(x=self.emission_per_gas.index, y=self.emission_per_gas.values),
                       text='Demonstração dos 10 gases causadores do efeito estufa com maiores índices de emissão.')
+
+
+    st.write('## Níveis Categórios de Emissão (2000-2019)')
+
+    (self.tab_nivel_1, self.tab_nivel_2, self.tab_nivel_3,
+    self.tab_nivel_4, self.tab_nivel_5, self.tab_nivel_6) = st.tabs(['Nível 1', 'Nível 2', 'Nível 3', 'Nível 4', 'Nível 5', 'Nível 6'])
+
+    for level in range(1, 7):
+        data = getattr(self, f'df_nivel_{level}')
+        feature_tab = getattr(self, f'tab_nivel_{level}')
+        with feature_tab:
+            if level in [4,5,6]:
+                plot_graph(px.bar(x=data.index, y=data.values))
+            else:
+                plot_graph(px.pie(names=data.index, values=data.values))
 
 Page().view()
